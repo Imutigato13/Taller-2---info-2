@@ -13,3 +13,5 @@ print(f"""\rDimension: {matriz_3D.ndim}
 \rTipo: {matriz_3D.dtype}
 \rTamaño por byte del array: {matriz_3D.itemsize}
 \rTamaño de cada byte :{matriz_3D.nbytes}""")
+
+matriz_2D = matriz_3D.reshape(-1,matriz_3D.shape[-1])
