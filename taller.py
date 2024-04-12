@@ -15,3 +15,11 @@ print(f"""\rDimension: {matriz_3D.ndim}
 \rTamaño de cada byte :{matriz_3D.nbytes}""")
 
 matriz_2D = matriz_3D.reshape(-1,matriz_3D.shape[-1])
+
+def df_trans(matriz):
+    try:
+        df = pd.DataFrame(matriz)
+        return df
+    except:
+        print("Valor no valido")
+
