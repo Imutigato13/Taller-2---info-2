@@ -14,7 +14,8 @@ print(f"""\rDimension: {matriz_3D.ndim}
 \rTamaño por byte del array: {matriz_3D.itemsize}
 \rTamaño de cada byte :{matriz_3D.nbytes}""")
 
-matriz_2D = matriz_3D.reshape(-1,matriz_3D.shape[-1])
+matriz_2D = np.reshape(matriz_3D,(matriz_3D.shape[0],matriz_3D.shape[1]*matriz_3D.shape[2]))
+print(matriz_2D)
 
 def df_trans(matriz):
     try:
