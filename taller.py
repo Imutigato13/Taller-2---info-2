@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+import scipy.io as sp
 
 plt.ion()
 
@@ -21,6 +22,15 @@ def df_trans(matriz):
     try:
         df = pd.DataFrame(matriz)
         return df
+    except:
+        print("Valor no valido")
+
+def cargar_mt_csv(dir:''):
+    try:
+        if dir.endswith('.mat'):
+            return sp.loadmat(dir)
+        elif dir.endsith('.csv'):
+            return pd.read_csv(dir)
     except:
         print("Valor no valido")
 
