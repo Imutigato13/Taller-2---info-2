@@ -31,6 +31,52 @@ def cargar_mt_csv(dir:''):
             return sp.loadmat(dir)
         elif dir.endsith('.csv'):
             return pd.read_csv(dir)
+        else:
+            print("Ruta no reconocida")
     except:
         print("Valor no valido")
+
+def sum(mat, eje = None):
+    try:
+        r = np.sum(mat, axis = eje)
+        return r
+    except:
+        print("Valores no validos")
+def rest(mat, eje = None):
+    try:
+        r = np.subtract.reduce(mat, axis = eje)
+        return r
+    except:
+        print("Valores no validos")
+def mult(mat, eje = None):
+    try:
+        r = np.multiply(mat, axis = eje)
+        return r
+    except:
+        print("Valores no validos")
+def div(mat, eje = None):
+    try:
+        r = np.divide(mat, axis = eje)
+        return r
+    except:
+        print("Valores no validos")
+def log(mat, eje = None):
+    try:
+        r = np.log(mat, axis = eje)
+        return r
+    except:
+        print("Valores no validos")
+def prom(mat, eje = None):
+    try:
+        r = np.mean(mat, axis = eje)
+        return r
+    except:
+        print("Valores no validos")
+def desv(mat, eje = None):
+    try:
+        r = np.std(mat, axis = eje)
+        return r
+    except:
+        print("Valores no validos")
+
 
